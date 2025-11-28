@@ -21,7 +21,7 @@ app.add_middleware(
 )
 
 # serve static files
-app.mount("/static", StaticFiles(directory="static"), name="static")
+#app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 class ChatRequest(BaseModel):
@@ -99,3 +99,4 @@ async def lead_webhook(request: Request):
             print("Error forwarding lead:", e)
 
     return {"status": "ok", "received": payload}
+
